@@ -1,29 +1,25 @@
 <template>
     <div>
-        <ul>
-            <li v-for="(x,index) in tdata" :key='index'>{{x}}</li>
-        </ul>
-        <h1>{{count}}</h1>
-        <button @click="up">+</button><hr>
-        <button @click="reduce">-</button>
+      <h1>{{name}}</h1>
     </div>
 </template>
 
 <script>
     export default{
         data(){
-            return{
-            tdata:['1','2','3','4'],
-            count:0,
-            }
+          return{
+            isUser: true,
+            msg:false,
+            msg1:''
+          }
         },
         methods:{
-          up(){
-            this.count++
-          },
-          reduce(){
-            this.count--
+          ceshi(){
+            console.log('测试成功')
           }
-        }
+        },
+      props:{
+        name
+      }
     }
 </script>
